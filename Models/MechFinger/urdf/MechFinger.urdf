@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="MechFinger">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="4.5992E-18 -0.0099501 0.03"
+        rpy="0 0 0" />
+      <mass
+        value="2.2532" />
+      <inertia
+        ixx="0.0027726"
+        ixy="5.064E-20"
+        ixz="7.5802E-20"
+        iyy="0.0053916"
+        iyz="1.4086E-20"
+        izz="0.0027727" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MechFinger/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.52941 0.54902 0.54902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MechFinger/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link1">
+    <inertial>
+      <origin
+        xyz="0.0175002150931184 -0.0075 -2.02182021125097E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.0057358122751643" />
+      <inertia
+        ixx="2.1462842273792E-07"
+        ixy="-1.42898877268077E-22"
+        ixz="-1.32348898008484E-22"
+        iyy="7.02033776204903E-07"
+        iyz="2.43921581949899E-23"
+        izz="7.16250826753962E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MechFinger/meshes/link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MechFinger/meshes/link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1"
+    type="revolute">
+    <origin
+      xyz="0 -0.0225 0.008"
+      rpy="3.1416 -1.0462 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="link1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="10"
+      velocity="100" />
+  </joint>
+  <link
+    name="link2">
+    <inertial>
+      <origin
+        xyz="0.0175002150931192 0.00749999999999999 -2.23085439010617E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.0057358122751643" />
+      <inertia
+        ixx="2.1462842273792E-07"
+        ixy="2.37823483221812E-22"
+        ixz="-1.38966342908909E-22"
+        iyy="7.02033776204902E-07"
+        iyz="1.11364230732143E-23"
+        izz="7.16250826753962E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MechFinger/meshes/link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MechFinger/meshes/link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint2"
+    type="revolute">
+    <origin
+      xyz="0.035 0 0"
+      rpy="-3.1416 0.741 0" />
+    <parent
+      link="link1" />
+    <child
+      link="link2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="10"
+      velocity="100" />
+  </joint>
+  <link
+    name="fingertip">
+    <inertial>
+      <origin
+        xyz="0.0214441157580348 -0.00749999999899943 0.000363766379078943"
+        rpy="0 0 0" />
+      <mass
+        value="0.00752238112648173" />
+      <inertia
+        ixx="2.74880881878481E-07"
+        ixy="-1.23037033806224E-16"
+        ixz="-4.60531164771403E-08"
+        iyy="1.12605308893331E-06"
+        iyz="-2.44263561760782E-17"
+        izz="1.16112796100964E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MechFinger/meshes/fingertip.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MechFinger/meshes/fingertip.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="endeffectorjoint"
+    type="revolute">
+    <origin
+      xyz="0.035 0 0"
+      rpy="3.1416 -0.15223 0" />
+    <parent
+      link="link2" />
+    <child
+      link="fingertip" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="10"
+      velocity="100" />
+  </joint>
+</robot>
